@@ -47,6 +47,6 @@ function addPopup() {
 function addIMDB() {
   $( 'div.now-credits > div > ul > li > .right' ).wrapInner(function() {
     var name = $( this ).attr('title');
-    return '<a href="http://www.imdb.com/find?ref_=nv_sr_fn&q=' + name + '" target="_blank"></a>';
+    return '<a class="imdbLink" href="http://www.imdb.com/find?ref_=nv_sr_fn&q=' + name + '" target="_blank"></a>';
   });
 }
