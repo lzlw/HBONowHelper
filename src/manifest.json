@@ -4,7 +4,7 @@
   "name": "HBO NOW Helper",
   "description": "Show more on HBO NOW",
   "author": "Lazlow Carmichael",
-  "version": "0.2",
+  "version": "0.2.1",
 
   "browser_action": {
     "default_icon": "icon.png",
