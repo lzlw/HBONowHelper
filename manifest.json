@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "HBO NOW Helper",
+  "description": "Show more on HBO NOW",
+  "author": "Lazlow Carmichael",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "HBO NOW Helper"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.hbonow.com/*"],
+      "js": ["js/jquery-3.1.1.js", "js/hbonowhelper.js"],
+      "css": ["css/styles.css"],
+      "run_at": "document_end"
+    }
+  ]
+}
