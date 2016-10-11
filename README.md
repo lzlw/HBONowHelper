@@ -9,9 +9,10 @@ of [HBO Now](https://www.hbonow.com).
 2. Unzip to directory of your choosing
 3. Open Chrome and click `More`
 4. Choose `More tools -> Extensions`
-5. Click `Load unpacked extension`
-6. Choose the directory where you unzipped the source
-7. Enjoy
+5. Make sure `Developer mode` is checked
+6. Click `Load unpacked extension`
+7. Choose the directory where you unzipped the source
+8. Enjoy
 
 ## Features
 
