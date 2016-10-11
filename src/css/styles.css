@@ -26,3 +26,7 @@
 .helperBox p {
   font-size: 12px;
 }
+
+.imdbLink {
+  text-decoration: underline;
+}
