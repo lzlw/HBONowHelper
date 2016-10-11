@@ -1,10 +1,10 @@
 {
   "manifest_version": 2,
 
-  "name": "HBO NOW Helper",
-  "description": "Show more on HBO NOW",
+  "name": "Improve HBO NOW UI",
+  "description": "Adds improvements to HBO NOW's web interface",
   "author": "Lazlow Carmichael",
-  "version": "0.2.1",
+  "version": "0.2.2",
 
   "browser_action": {
     "default_icon": "icon.png",
