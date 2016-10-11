@@ -16,8 +16,11 @@ of [HBO Now](https://www.hbonow.com).
 ## Features
 
 ### Episode Information
-Provides episode information when cursor is over a thumbnail:
+Provides episode information when cursor is over a thumbnail
 ![alt text](https://github.com/lzlw/HBONowHelper/raw/master/res/infobox.png "Episode information box")
+
+### Links to IMDB
+Provides IMDB search links to people listed in 'Cast & Crew' sections
 
 ## Author
 Lazlow Carmichael
