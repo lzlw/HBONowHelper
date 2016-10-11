@@ -13,6 +13,8 @@ $( document ).ready(function() {
     $( ".helperBox" ).css('top', e.pageY + 5)
                  .css('left', e.pageX + 5)
   });
+
+  addIMDB();
 });
 
 function setPopupInfo(obj) {
@@ -40,4 +42,11 @@ function setPopupInfo(obj) {
 function addPopup() {
   var popupHTML = '<div class="helperBox"></div>';
   $( "body" ).append(popupHTML);
+}
+
+function addIMDB() {
+  $( 'div.now-credits > div > ul > li > .right' ).wrapInner(function() {
+    var name = $( this ).attr('title');
+    return '<a href="http://www.imdb.com/find?ref_=nv_sr_fn&q=' + name + '" target="_blank"></a>';
+  });
 }
