@@ -1,20 +1,35 @@
+var hoverInfo;
+var imdbLinks;
+
+chrome.storage.sync.get("hoverInfoOption", function(result) {
+  hoverInfo = result.hoverInfoOption;
+});
+
+chrome.storage.sync.get("imdbOption", function(result) {
+  imdbLinks = result.imdbOption;
+});
+
 $( document ).ready(function() {
-  addPopup();
+  if (hoverInfo) {
+    addPopup();
 
-  $( ".now-thumbnail[data-episode]" ).hover(function(e) {
-    if (setPopupInfo($( this ))) {
-      $( ".helperBox" ).show();
-    }
-  }, function() {
-    $( ".helperBox" ).hide();
-  });
+    $( ".now-thumbnail[data-episode]" ).hover(function(e) {
+      if (setPopupInfo($( this ))) {
+        $( ".helperBox" ).show();
+      }
+    }, function() {
+      $( ".helperBox" ).hide();
+    });
 
-  $( ".now-thumbnail[data-episode]").mousemove(function (e) {
-    $( ".helperBox" ).css('top', e.pageY + 5)
-                 .css('left', e.pageX + 5)
-  });
+    $( ".now-thumbnail[data-episode]").mousemove(function (e) {
+      $( ".helperBox" ).css('top', e.pageY + 5)
+                   .css('left', e.pageX + 5)
+    });
+  }
 
-  addIMDB();
+  if (imdbLinks) {
+    addIMDB();
+  }
 });
 
 function setPopupInfo(obj) {
