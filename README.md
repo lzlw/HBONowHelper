@@ -1,4 +1,4 @@
-# HBO Now Helper
+# Improve HBO NOW UI
 *Improves the UI of HBO Now*
 
 A Chrome extension in development that aims to improve the user interface
@@ -23,3 +23,6 @@ Provides IMDB search links to people listed in 'Cast & Crew' sections
 
 ## Author
 Lazlow Carmichael
+
+## Contributors
+* tstimola
