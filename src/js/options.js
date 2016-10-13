@@ -5,6 +5,12 @@ function saveOptions() {
   chrome.storage.sync.set({
     imdbOption: imdb,
     hoverInfoOption: hoverInfo
+  }, function() {
+    var status = document.getElementById('status');
+    status.textContent = 'Options saved!';
+    setTimeout(function() {
+      status.textContent = '';
+    }, 1500);
   });
 }
 

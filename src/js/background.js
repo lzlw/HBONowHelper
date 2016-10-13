@@ -4,7 +4,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 
 chrome.runtime.onInstalled.addListener(function(obj) {
   chrome.storage.sync.set({
-    imdbOption: false,
+    imdbOption: true,
     hoverInfoOption: true
   });
 });

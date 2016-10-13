@@ -4,7 +4,7 @@
   "name": "Improve HBO NOW UI",
   "description": "Adds improvements to HBO NOW's web interface",
   "author": "Lazlow Carmichael",
-  "version": "0.3.1",
+  "version": "0.3.3",
 
   "icons": {
     "16": "img/icon16.png",
