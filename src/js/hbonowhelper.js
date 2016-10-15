@@ -10,6 +10,7 @@ chrome.storage.sync.get("imdbOption", function(result) {
 });
 
 $( document ).ready(function() {
+  // Set up popup box if enabled
   if (hoverInfo) {
     addPopup();
 
@@ -27,6 +28,7 @@ $( document ).ready(function() {
     });
   }
 
+  // Add IMDB links if enabled
   if (imdbLinks) {
     addIMDB();
   }
@@ -40,13 +42,24 @@ function setPopupInfo(obj) {
     $( '.helperBox' ).html(function() {
       var description = data.description;
       var title = data.title;
-      var runtime = Math.floor(data.duration / 60) + ' minutes';
+      var runtime = Math.floor(data.duration / 60);
 
-      return [
-        '<h1>' + title + ' (' + runtime + ')</h1>',
-        '<hr>',
-        '<p>' + description + '</p>'
-      ].join('');
+      var episodeInfo = [];
+
+      // Check for valid runtime
+      if (isNaN(runtime)) {
+        // Runtime is bad, so don't use it
+        episodeInfo.push('<h1>' + title + '</h1>');
+        episodeInfo.push('<hr>');
+        episodeInfo.push('<p>' + description + '</p>');
+      } else {
+        // Runtime is good, so add that to heading
+        episodeInfo.push('<h1>' + title + ' (' + runtime + ' minutes)</h1>');
+        episodeInfo.push('<hr>');
+        episodeInfo.push('<p>' + description + '</p>');
+      }
+
+      return episodeInfo.join('');
     });
     return true;
   } else {
@@ -64,4 +77,13 @@ function addIMDB() {
     var name = $( this ).attr('title');
     return '<a class="imdbLink" href="http://www.imdb.com/find?ref_=nv_sr_fn&q=' + encodeURI(name) + '" target="_blank"></a>';
   });
+}
+
+function htmlEntities(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
 }

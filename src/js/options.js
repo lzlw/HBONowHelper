@@ -15,6 +15,7 @@ function saveOptions() {
 }
 
 function loadOptions() {
+  // Get options from local storage and set defaults if they are lost.
   chrome.storage.sync.get({
     imdbOption: true,
     hoverInfoOption: true

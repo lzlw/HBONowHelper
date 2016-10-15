@@ -1,3 +1,4 @@
+/* Styles for helperBox popup */
 .helperBox {
   display: none;
   position: absolute;
@@ -26,7 +27,14 @@
 .helperBox p {
   font-size: 12px;
 }
+/**************************************/
 
+/* Styles for IMDB links */
 .imdbLink {
   text-decoration: underline;
+}
+
+.imdbLink:hover {
+  text-decoration: underline;
+  color: #999;
 }
