@@ -22,9 +22,16 @@ $( document ).ready(function() {
       $( ".helperBox" ).hide();
     });
 
-    $( ".now-thumbnail[data-episode]").mousemove(function (e) {
+    $( ".now-thumbnail[data-episode]").mousemove(function(e) {
       $( ".helperBox" ).css('top', e.pageY + 5)
                    .css('left', e.pageX + 5)
+    });
+
+    // Hide popup box when over special buttons
+    $( "div.arrow, div.recon" ).hover(function() {
+      $( ".helperBox" ).hide();
+    }, function() {
+      $( ".helperBox" ).show();
     });
   }
 
